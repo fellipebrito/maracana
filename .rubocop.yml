@@ -1,0 +1,4 @@
+# TrivialAccessors requires exact name matches and doesn't allow
+# predicated methods by default.
+Documentation:
+  Enabled : false
