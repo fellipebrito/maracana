@@ -33,7 +33,10 @@ gem 'clearance'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+group :test do
+  gem 'minitest'
+  gem 'shoulda-matchers', '2.5.0'
+end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console
