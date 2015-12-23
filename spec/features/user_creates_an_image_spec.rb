@@ -7,7 +7,7 @@ feature 'User creates an image with valid data' do
     expect(page).to have_text('Death Star')
   end
 
-  scenario 'they fill the form, post and sees the image saved' do
+  scenario 'they do not fill the required fields and see an alert' do
     submit_image title: 'Death Star', filepath: ''
 
     expect(page).to have_text("can't be blank")
