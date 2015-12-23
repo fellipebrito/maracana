@@ -8,10 +8,10 @@ class CommentsController < ApplicationController
 
   def find_commentable
     params.each do |name, value|
-      return Regexp.last_match(1).
-        classify.
-        constantize.
-        find(value) if name =~ /(.+)_id$/
+      return Regexp.last_match(1)
+        .classify
+        .constantize
+        .find(value) if name =~ /(.+)_id$/
     end
     nil
   end
