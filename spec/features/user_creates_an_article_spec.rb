@@ -11,9 +11,16 @@ feature 'User creates an article with valid data' do
     expect(page).to have_link('Edit')
   end
 
-  scenario 'they do not fill the required fields' do
+  scenario 'they do not fill the required fields and see an alert' do
+    sign_up_with email: 'lucky@skywalker.com', password: 'password'
     submit_article title: 'The force awakens', content: ''
 
     expect(page).to have_text("can't be blank")
+  end
+
+  scenario 'user is not logged in and is redirected' do
+    visit new_article_path
+
+    expect(page).to have_text('Please sign in to continue')
   end
 end
