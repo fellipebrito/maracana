@@ -34,6 +34,8 @@ gem 'clearance'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :test do
+  gem 'database_cleaner'
+  gem 'factory_girl'
   gem 'minitest'
   gem 'shoulda-matchers', '2.5.0'
 end

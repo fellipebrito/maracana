@@ -1,2 +1,3 @@
-<%= @article.title %>
+<%= @article.title %> by <%= @article.user.email %>
 <%= @article.content %>
+<%= link_to 'Edit Article', edit_article_path(@article) unless @article.user_id != current_user.id %>
